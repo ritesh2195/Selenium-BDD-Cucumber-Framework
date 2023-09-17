@@ -16,5 +16,5 @@ Feature: Login Feature
   @login
   Scenario: login using invalid email id or mobile no
 
-    When user enters wrong email "abcucgugsd@gmail.com" and click on the continue button
+    When user enters wrong email "abcgugsd@gmail.com" and click on the continue button
     Then user should get alert message with alert icon

@@ -2,8 +2,11 @@ package org.ecommerce.parallel;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.ecommerce.utilities.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class AppHook {
@@ -20,7 +23,17 @@ public class AppHook {
     }
 
     @After("@login")
-    public void tearDown(){
+    public void tearDown(Scenario scenario){
+
+        if (scenario.isFailed()) {
+
+            String screenshotName = scenario.getName().replaceAll(" ", "_");
+
+            byte[] sourcePath = ((TakesScreenshot) BrowserFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
+
+            scenario.attach(sourcePath, "image/png", screenshotName);
+
+        }
 
         driver.quit();
     }
