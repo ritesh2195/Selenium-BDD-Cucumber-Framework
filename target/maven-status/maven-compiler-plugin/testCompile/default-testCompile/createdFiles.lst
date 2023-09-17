@@ -1,0 +1,3 @@
+org\ecommerce\parallel\LoginPageStepDef.class
+org\ecommerce\parallel\AppHook.class
+org\ecommerce\parallel\HomePageSteps.class

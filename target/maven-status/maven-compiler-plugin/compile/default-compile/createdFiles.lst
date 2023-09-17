@@ -1,0 +1,4 @@
+org\ecommerce\pages\HeaderPage.class
+org\ecommerce\pages\HomePage.class
+org\ecommerce\utilities\BrowserFactory.class
+org\ecommerce\pages\LoginPage.class
