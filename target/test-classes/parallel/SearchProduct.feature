@@ -1,6 +1,6 @@
 Feature: Search product feature
 
-  @search
+
   Scenario: Auto populated list in search text box
 
     When user enters "badminton" in search text box
@@ -10,4 +10,4 @@ Feature: Search product feature
   Scenario: Search product anc check auto populated list
     When user enters "badminton" in search text box
     And user selects "badminton rackets" from auto populated list
-    Then user should navigate to product details page
+    And user clicks on first product in search result page

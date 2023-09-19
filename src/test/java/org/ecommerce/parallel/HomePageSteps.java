@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.ecommerce.pages.HomePage;
+import org.ecommerce.pages.SearchResultPage;
 import org.ecommerce.utilities.BrowserFactory;
 import org.junit.Assert;
 
@@ -45,10 +46,6 @@ public class HomePageSteps {
     public void user_selects_from_auto_populated_list(String productToSelect) {
 
         homePage.getHeaderPage().selectProduct(productToSelect);
-
-    }
-    @Then("user should navigate to product details page")
-    public void user_should_navigate_to_product_details_page() {
 
         Assert.assertTrue(homePage.getPageTitle().contains("badminton"));
 
