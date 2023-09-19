@@ -7,7 +7,7 @@ Feature: Login Feature
   @login
   Scenario: Login using valid credentials
 
-    When user enters email "youremail" and click on continue button
+    When user enters email "your emil" and click on continue button
     And User enters password "password"
     And user clicks on sign in button
     Then user should be able to login in the application

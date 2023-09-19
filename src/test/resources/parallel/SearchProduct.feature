@@ -1,5 +1,6 @@
 Feature: Search product feature
 
+  @search
   Scenario: Auto populated list in search text box
 
     When user enters "badminton" in search text box

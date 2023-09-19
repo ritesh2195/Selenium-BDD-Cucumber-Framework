@@ -3,6 +3,8 @@ package org.ecommerce.pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.Set;
+
 public class BasePage extends AbstractPage{
 
     public BasePage(WebDriver driver) {
@@ -83,6 +85,31 @@ public class BasePage extends AbstractPage{
         } catch (Exception e){
 
             e.printStackTrace();
+        }
+    }
+
+    public String getParentWindowId(){
+
+        return driver.getWindowHandle();
+    }
+
+    @Override
+    public void switchToParentWindow(String parentWindowId){
+
+        driver.switchTo().window(parentWindowId);
+    }
+
+    @Override
+    public void switchToChildWindow(String parentWindowId){
+
+        Set<String> childWindowsId = driver.getWindowHandles();
+
+        for (String childWindowId:childWindowsId){
+
+            if (!childWindowId.equalsIgnoreCase(parentWindowId)){
+
+                driver.switchTo().window(childWindowId);
+            }
         }
     }
 }

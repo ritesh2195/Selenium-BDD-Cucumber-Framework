@@ -24,7 +24,11 @@ public abstract class AbstractPage {
 
     public abstract String getCurrentURL();
 
+    public abstract void switchToChildWindow(String parentWindowID);
+
     public abstract void clickWebElement(By locator);
 
     public abstract void clickWebElement(WebElement element);
+
+    public abstract void switchToParentWindow(String parentWindowId);
 }
