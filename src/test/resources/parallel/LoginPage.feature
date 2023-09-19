@@ -9,7 +9,7 @@ Feature: Login Feature
 
     When user enters email "youremail" and click on continue button
     And User enters password "password"
-    When user clicks on sign in button
+    And user clicks on sign in button
     Then user should be able to login in the application
 
   @login
