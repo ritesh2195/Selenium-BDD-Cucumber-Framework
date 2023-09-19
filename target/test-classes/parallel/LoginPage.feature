@@ -2,8 +2,7 @@ Feature: Login Feature
 
   Background: Prerequisite Steps
 
-    Given user is launching amazon application url
-    And User clicks on the SignIn link
+    Given user is on login page
 
   @login
   Scenario: Login using valid credentials

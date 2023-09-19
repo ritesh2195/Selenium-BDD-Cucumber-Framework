@@ -27,7 +27,7 @@ public class BasePage extends AbstractPage{
 
             driver.findElement(locator).click();
 
-        } catch (NoSuchElementException e){
+        } catch (NoSuchElementException | StaleElementReferenceException e){
 
             wait.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 
@@ -50,8 +50,39 @@ public class BasePage extends AbstractPage{
         } catch (Exception e){
 
             e.printStackTrace();
+        }
+    }
 
-            System.out.println("Exception occurred");
+    @Override
+    public void clickWebElement(WebElement element) {
+
+        try {
+
+            element.click();
+
+        } catch (NoSuchElementException | StaleElementReferenceException e){
+
+            wait.until(ExpectedConditions.visibilityOf(element));
+
+            element.click();
+        }
+
+        catch (ElementClickInterceptedException e){
+
+            JavascriptExecutor javascriptExecutor = ((JavascriptExecutor)driver);
+
+            javascriptExecutor.executeScript("argument[0].click()",element);
+        }
+
+        catch (ElementNotInteractableException e){
+
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+
+            element.click();
+
+        } catch (Exception e){
+
+            e.printStackTrace();
         }
     }
 }

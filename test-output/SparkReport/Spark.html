@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Suit Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 18, 2023 02:56:05 AM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 19, 2023 08:45:01 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 18, 2023 02:56:05 AM</h3>
+<h3>Sep 19, 2023 08:45:01 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 18, 2023 02:56:22 AM</h3>
+<h3>Sep 19, 2023 08:45:15 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>10</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>3</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Login Feature":16.914
+"Search product feature":13.728
 };
 </script>
 <div class="row">
@@ -172,8 +172,8 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@login</td>
-<td>2</td>
+<td>@search</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -211,13 +211,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
+passChild: 1,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 10,
+passGrandChild: 3,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -242,7 +242,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@login</a>
+<a class="dropdown-item" href="#">@search</a>
 </ul>
 </li>
 </ul>
@@ -253,9 +253,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Login Feature</p>
+            <p class="name">Search product feature</p>
             <p class="text-sm">
-              <span>2:56:05 AM</span> / <span>00:00:16:914</span>
+              <span>8:45:01 PM</span> / <span>00:00:13:728</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -263,10 +263,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Login Feature</h5>
-<span class='badge badge-success'>09.18.2023 2:56:05 AM</span>
-<span class='badge badge-danger'>09.18.2023 2:56:22 AM</span>
-<span class='badge badge-default'>00:00:16:914</span>
+<h5 class="test-status text-pass">Search product feature</h5>
+<span class='badge badge-success'>09.19.2023 8:45:01 PM</span>
+<span class='badge badge-danger'>09.19.2023 8:45:15 PM</span>
+<span class='badge badge-default'>00:00:13:728</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -278,69 +278,23 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login using valid credentials</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Search product anc check auto populated list</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_is_launching_amazon_application_url()">
-                <span>Given user is launching amazon application url</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_enters_in_search_text_box(java.lang.String)">
+                <span>When user enters "badminton" in search text box</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_clicks_on_the_sign_in_link()">
-                <span>And User clicks on the SignIn link</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_selects_from_auto_populated_list(java.lang.String)">
+                <span>And user selects "badminton rackets" from auto populated list</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_enters_and_click_on_continue_button(java.lang.String)">
-                <span>When user enters email "riteshranjanmishra938@gmail.com" and click on continue button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_enters(java.lang.String)">
-                <span>And User enters password "Quantum@1900"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_clicks_on_sign_in_button()">
-                <span>When user clicks on sign in button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_should_be_able_to_login_in_the_application()">
-                <span>Then user should be able to login in the application</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>login using invalid email id or mobile no</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_is_launching_amazon_application_url()">
-                <span>Given user is launching amazon application url</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_clicks_on_the_sign_in_link()">
-                <span>And User clicks on the SignIn link</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_enters_wrong_email_id_and_click_on_the_continue_button(java.lang.String)">
-                <span>When user enters wrong email "abcgugsd@gmail.com" and click on the continue button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.LoginPageStepDef.user_should_get_alert_message_with_alert_icon()">
-                <span>Then user should get alert message with alert icon</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_should_navigate_to_product_details_page()">
+                <span>Then user should navigate to product details page</span>
       <div>
       </div>
               </div>
@@ -370,15 +324,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>2</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@login</p>
-<p class="duration text-sm">2 tests</p>
+<p class="name">@search</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@login</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
+<h4>@search</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -391,21 +345,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>02:56:05 AM</td>
+<td>20:45:01 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Login using valid credentials</a>
+<a href="#" class="linked" test-id='1' id='2'>Search product anc check auto populated list</a>
 <div class="">
-<span class="badge badge-default">Login Feature.Login using valid credentials</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:56:15 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='11'>login using invalid email id or mobile no</a>
-<div class="">
-<span class="badge badge-default">Login Feature.login using invalid email id or mobile no</span>
+<span class="badge badge-default">Search product feature.Search product anc check auto populated list</span>
 </div>
 </td>
 </tr>

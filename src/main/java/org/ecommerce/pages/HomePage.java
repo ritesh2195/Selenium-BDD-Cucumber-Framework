@@ -13,14 +13,8 @@ public class HomePage extends BasePage {
         this.headerPage = new HeaderPage(driver);
     }
 
-    public void clickSignInLink(){
+    public HeaderPage getHeaderPage(){
 
-        this.headerPage.navigateToLoginPage();
-
-    }
-
-    public String getUserName(){
-
-        return this.headerPage.getUserName();
+        return new HeaderPage(driver);
     }
 }

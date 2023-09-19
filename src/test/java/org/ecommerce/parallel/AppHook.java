@@ -14,7 +14,7 @@ public class AppHook {
     private BrowserFactory browserFactory;
     private WebDriver driver;
 
-    @Before("@login")
+    @Before
     public void setUp(){
 
         browserFactory = new BrowserFactory();
@@ -22,7 +22,7 @@ public class AppHook {
         driver = browserFactory.init_driver(ConfigReader.getInstance().getBrowserName());
     }
 
-    @After("@login")
+    @After
     public void tearDown(Scenario scenario){
 
         if (scenario.isFailed()) {

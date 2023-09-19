@@ -51,7 +51,7 @@ public class LoginPageStepDef {
 
         String firstName = ConfigReader.getInstance().getFirstName();
 
-        Assert.assertEquals("Hello, "+firstName,homePage.getUserName());
+        Assert.assertEquals("Hello, "+firstName,homePage.getHeaderPage().getUserName());
 
     }
 
