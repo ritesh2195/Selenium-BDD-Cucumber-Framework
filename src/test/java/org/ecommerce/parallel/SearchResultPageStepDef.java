@@ -48,7 +48,7 @@ public class SearchResultPageStepDef {
 
         String productCountInCartIcon = detailsPage.addProductToCard();
 
-        Assert.assertEquals("2",productCountInCartIcon);
+        Assert.assertEquals((String)ScenarioContext.getData("quantitySelected"),productCountInCartIcon);
 
         detailsPage.navigateToCartPage();
     }

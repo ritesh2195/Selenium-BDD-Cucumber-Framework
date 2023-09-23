@@ -2,13 +2,11 @@ package org.ecommerce.parallel;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.ecommerce.pages.HeaderPage;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.LoginPage;
 import org.ecommerce.utilities.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 
 import java.util.HashMap;
 
