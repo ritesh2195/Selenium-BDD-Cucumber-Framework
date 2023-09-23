@@ -18,13 +18,9 @@ public class CartPageStepDef {
     @Then("user should see the product in my cart")
     public void user_should_see_the_product_in_my_cart() {
 
-        System.out.println(cartPage.getCartProductName());
-
         String productName = (String)ScenarioContext.getData("productName");
 
         productName = productName.trim();
-
-        System.out.println(productName);
 
         Assert.assertTrue(cartPage.getCartProductName().contains(productName));
     }
@@ -33,6 +29,11 @@ public class CartPageStepDef {
 
         String price = cartPage.getCartTotalPrice();
 
-        System.out.println(price);
+        int quantity = Integer.parseInt((String)ScenarioContext.getData("quantitySelected"));
+
+        int intPrice = (int) Math.floor((Double.parseDouble(price))/quantity);
+
+        Assert.assertEquals(String.valueOf(intPrice),ScenarioContext.getData("productPrice"));
+
     }
 }

@@ -1,7 +1,9 @@
 package org.ecommerce.pages;
 
+import org.ecommerce.utilities.ScenarioContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -37,6 +39,8 @@ public class ProductDetailsPage extends BasePage {
     public String addProductToCard(){
 
         Select select = new Select(driver.findElement(quantityDropDown));
+
+        ScenarioContext.setData("quantitySelected",select.getFirstSelectedOption().getText());
 
         clickWebElement(addToCartButton);
 

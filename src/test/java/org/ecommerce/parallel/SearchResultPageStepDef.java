@@ -25,8 +25,6 @@ public class SearchResultPageStepDef {
     @When("user clicks on first product in search result page")
     public void user_clicks_on_first_product_in_search_result_page() {
 
-        //resultPage.clickOnFirstProduct();
-
         HashMap<String,String> listPriceProductDetails = resultPage.selectProductWithLeastPrice();
 
         String parentId = resultPage.getParentWindowId();
