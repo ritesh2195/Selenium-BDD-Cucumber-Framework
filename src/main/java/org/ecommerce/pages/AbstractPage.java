@@ -31,4 +31,6 @@ public abstract class AbstractPage {
     public abstract void clickWebElement(WebElement element);
 
     public abstract void switchToParentWindow(String parentWindowId);
+
+    public abstract Object getTextValue(By locator);
 }

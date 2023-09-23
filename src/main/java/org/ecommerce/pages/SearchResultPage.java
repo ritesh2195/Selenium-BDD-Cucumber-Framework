@@ -5,10 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.text.NumberFormat;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 public class SearchResultPage extends BasePage{
 
@@ -38,7 +35,7 @@ public class SearchResultPage extends BasePage{
         return firstProductName;
     }
 
-    public void selectProductWithLeastPrice(){
+    public HashMap<String, String> selectProductWithLeastPrice(){
 
         List<WebElement> productsPrice = driver.findElements(productPrice);
 
@@ -50,7 +47,7 @@ public class SearchResultPage extends BasePage{
 
             if (stringPrice.length()>3){
 
-                String strPrice = stringPrice.split(",")[0]+stringPrice.split(",")[1];
+                String strPrice = stringPrice.replace(",","");
 
                 list.add(Integer.parseInt(strPrice));
             }
@@ -73,9 +70,17 @@ public class SearchResultPage extends BasePage{
 
         String leastPrice = formatter.format(list.get(0));
 
-        //String xpathValue = "//span[text()='"+leastPrice+"']";
-
         clickWebElement(By.xpath("//span[text()='"+leastPrice+"']"));
+
+        String leastPriceProductName = driver.findElement(By.xpath("//span[text()='"+leastPrice+"']//ancestor::div[contains(@class,'a-spacing')]//span[contains(@class,'a-size-base-plus')]")).getText();
+
+        HashMap<String,String> map = new HashMap<>();
+
+        map.put("productName",leastPriceProductName);
+
+        map.put("leastPriceOfProduct",leastPrice);
+
+        return map;
 
     }
 }

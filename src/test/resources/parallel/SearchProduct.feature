@@ -11,3 +11,6 @@ Feature: Search product feature
     When user enters "badminton" in search text box
     And user selects "badminton rackets" from auto populated list
     And user clicks on first product in search result page
+    And user adds product in the cart
+    Then user should see the product in my cart
+    And verify cart total price

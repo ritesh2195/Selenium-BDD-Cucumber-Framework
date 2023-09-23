@@ -112,4 +112,21 @@ public class BasePage extends AbstractPage{
             }
         }
     }
-}
+
+    public String getTextValue(By locator){
+
+        try {
+
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
+
+            return driver.findElement(locator).getText();
+
+        } catch (Exception e){
+
+            e.printStackTrace();
+        }
+
+        return "Exception occurred while retrieving the text";
+
+        }
+    }
