@@ -5,6 +5,7 @@ import io.cucumber.java.en.When;
 import org.ecommerce.pages.ProductDetailsPage;
 import org.ecommerce.pages.SearchResultPage;
 import org.ecommerce.utilities.BrowserFactory;
+import org.ecommerce.utilities.ScenarioContext;
 import org.junit.Assert;
 
 import java.util.HashMap;
@@ -34,7 +35,13 @@ public class SearchResultPageStepDef {
 
         HashMap<String,String> productDetails =  detailsPage.getProductDetailsOnDetailsPage();
 
+        String price = productDetails.get("productPriceOnDetailsPage");
+
         Assert.assertEquals(productDetails.get("productPriceOnDetailsPage"),listPriceProductDetails.get("leastPriceOfProduct"));
+
+        ScenarioContext.setData("productName",productDetails.get("productNameOnDetailsPage"));
+
+        ScenarioContext.setData("productPrice",productDetails.get("productPriceOnDetailsPage"));
 
     }
 

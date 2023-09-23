@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.ecommerce.utilities.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
+import org.ecommerce.utilities.ScenarioContext;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +16,13 @@ public class AppHook {
     private WebDriver driver;
 
     @Before
-    public void setUp(){
+    public void setUp(Scenario scenario){
 
         browserFactory = new BrowserFactory();
 
         driver = browserFactory.init_driver(ConfigReader.getInstance().getBrowserName());
+
+        ScenarioContext.setContext(scenario);
     }
 
     @After
