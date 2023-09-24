@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
         plugin= {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         features = {"src//test//resources//parallel"},
         glue = {"org.ecommerce.parallel"},
-        tags = "@search"
+        tags = "@address"
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Suit Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 23, 2023 04:54:19 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 24, 2023 06:28:10 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 23, 2023 04:54:19 PM</h3>
+<h3>Sep 24, 2023 06:28:10 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 23, 2023 04:54:39 PM</h3>
+<h3>Sep 24, 2023 06:28:25 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>6</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>7</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Search product feature":19.546
+"Add and update address in amazon account":15.005
 };
 </script>
 <div class="row">
@@ -172,7 +172,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@search</td>
+<td>@address</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -217,7 +217,7 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 6,
+passGrandChild: 7,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -242,7 +242,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@search</a>
+<a class="dropdown-item" href="#">@address</a>
 </ul>
 </li>
 </ul>
@@ -253,9 +253,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Search product feature</p>
+            <p class="name">Add and update address in amazon account</p>
             <p class="text-sm">
-              <span>4:54:20 PM</span> / <span>00:00:19:546</span>
+              <span>6:28:10 PM</span> / <span>00:00:15:005</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -263,10 +263,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Search product feature</h5>
-<span class='badge badge-success'>09.23.2023 4:54:20 PM</span>
-<span class='badge badge-danger'>09.23.2023 4:54:39 PM</span>
-<span class='badge badge-default'>00:00:19:546</span>
+<h5 class="test-status text-pass">Add and update address in amazon account</h5>
+<span class='badge badge-success'>09.24.2023 6:28:10 PM</span>
+<span class='badge badge-danger'>09.24.2023 6:28:25 PM</span>
+<span class='badge badge-default'>00:00:15:005</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -278,38 +278,45 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Search product anc check auto populated list</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Add new address in amazon account</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_enters_in_search_text_box(java.lang.String)">
-                <span>When user enters "badminton" in search text box</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_logged_in_amazon_account()">
+                <span>Given user logged in amazon account</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.HomePageSteps.user_selects_from_auto_populated_list(java.lang.String)">
-                <span>And user selects "badminton rackets" from auto populated list</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_navigate_to_your_address_page()">
+                <span>And user navigate to your address page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.SearchResultPageStepDef.user_clicks_on_first_product_in_search_result_page()">
-                <span>And user clicks on first product in search result page</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_clicks_on_add_address()">
+                <span>When user clicks on add address</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.SearchResultPageStepDef.user_adds_product_in_the_cart()">
-                <span>And user adds product in the cart</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_enters_following_details(io.cucumber.datatable.DataTable)">
+                <span>And user enters following details</span>
+      <div><table class='markup-table table '><tr><td>Field</td><td>Value</td></tr><tr><td>Country/Region</td><td>India</td></tr><tr><td>Full Name</td><td>John Doe</td></tr><tr><td>Mobile Number</td><td>1234567890</td></tr><tr><td>Pin Code</td><td>411067</td></tr><tr><td>Flat, House no., Building, Company, Apartment</td><td>Apt 4B</td></tr><tr><td>Area, Street, Sector, Village</td><td>Hinjawadi Phase 1</td></tr><tr><td>Town/City</td><td>Pune</td></tr><tr><td>State</td><td>MAHARASHTRA</td></tr></table>
+      </div>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.CartPageStepDef.user_should_see_the_product_in_my_cart()">
-                <span>Then user should see the product in my cart</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_clicks_on_add_address_button()">
+                <span>And user clicks on add address button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="org.ecommerce.parallel.CartPageStepDef.verify_cart_total_price()">
-                <span>And verify cart total price</span>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.user_should_see_confirmation_message()">
+                <span>Then user should see confirmation message</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="org.ecommerce.parallel.AddressPageStepDef.address_should_be_added_in_your_address_section()">
+                <span>And address should be added in your address section</span>
       <div>
       </div>
               </div>
@@ -341,12 +348,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@search</p>
+<p class="name">@address</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@search</h4>
+<h4>@address</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -360,11 +367,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>16:54:20 PM</td>
+<td>18:28:10 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Search product anc check auto populated list</a>
+<a href="#" class="linked" test-id='1' id='2'>Add new address in amazon account</a>
 <div class="">
-<span class="badge badge-default">Search product feature.Search product anc check auto populated list</span>
+<span class="badge badge-default">Add and update address in amazon account.Add new address in amazon account</span>
 </div>
 </td>
 </tr>

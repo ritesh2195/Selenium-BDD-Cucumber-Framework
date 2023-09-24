@@ -53,4 +53,14 @@ public class ConfigReader {
 
         return properties.getProperty("firstName");
     }
+
+    public String getEmailId(){
+
+        return properties.getProperty("email");
+    }
+
+    public String getPassword(){
+
+        return properties.getProperty("password");
+    }
 }

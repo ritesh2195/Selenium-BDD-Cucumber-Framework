@@ -26,6 +26,11 @@ public class HeaderPage extends BasePage {
         clickWebElement(signInLink);
     }
 
+    public void navigateToAccountPage(){
+
+        clickWebElement(accountListLine1);
+    }
+
     public String getUserName(){
 
         return driver.findElement(accountListLine1).getText();
