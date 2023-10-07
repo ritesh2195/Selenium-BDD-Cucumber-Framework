@@ -1,6 +1,5 @@
 package org.ecommerce.parallel;
 
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.ecommerce.pages.ProductDetailsPage;
 import org.ecommerce.pages.SearchResultPage;

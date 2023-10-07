@@ -4,6 +4,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.AccountPage;
 import org.ecommerce.pages.AddAddressPage;
 import org.ecommerce.pages.HomePage;
@@ -22,16 +23,22 @@ public class AddressPageStepDef {
     private LoginPage loginPage;
     private AddAddressPage addAddressPage;
     private AccountPage accountPage;
+    private PageManager pageManager;
 
     public AddressPageStepDef(){
 
-        homePage = new HomePage(BrowserFactory.getDriver());
+        pageManager = new PageManager(BrowserFactory.getDriver());
 
-        loginPage = new LoginPage(BrowserFactory.getDriver());
+        homePage = pageManager.getHomePage();
 
-        addAddressPage = new AddAddressPage(BrowserFactory.getDriver());
+        loginPage = pageManager.getLoginPage();
 
-        accountPage = new AccountPage(BrowserFactory.getDriver());
+        addAddressPage = pageManager.getAddAddressPage();
+
+        accountPage = pageManager.getAccountPage();
+
+        addAddressPage = pageManager.getAddAddressPage();
+
     }
 
     @Given("user logged in amazon account")
