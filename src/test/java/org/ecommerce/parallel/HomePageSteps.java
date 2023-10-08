@@ -3,6 +3,7 @@ package org.ecommerce.parallel;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.SearchResultPage;
 import org.ecommerce.utilities.BrowserFactory;
@@ -13,10 +14,13 @@ import java.util.LinkedList;
 public class HomePageSteps {
 
     private HomePage homePage;
+    private PageManager pageManager;
 
     public HomePageSteps(){
 
-        homePage = new HomePage(BrowserFactory.getDriver());
+        pageManager = new PageManager(BrowserFactory.getDriver());
+
+        homePage = pageManager.getHomePage();
     }
 
     @Given("user is on login page")

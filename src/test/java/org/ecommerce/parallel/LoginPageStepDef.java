@@ -2,6 +2,7 @@ package org.ecommerce.parallel;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.LoginPage;
 import org.ecommerce.utilities.BrowserFactory;
@@ -14,12 +15,15 @@ public class LoginPageStepDef {
 
     private final LoginPage loginPage;
     private final HomePage homePage;
+    private PageManager pageManager;
 
     public LoginPageStepDef(){
 
-        homePage = new HomePage(BrowserFactory.getDriver());
+        pageManager = new PageManager(BrowserFactory.getDriver());
 
-        loginPage = new LoginPage(BrowserFactory.getDriver());
+        homePage = pageManager.getHomePage();
+
+        loginPage = pageManager.getLoginPage();
     }
 
     @When("user enters email {string} and click on continue button")

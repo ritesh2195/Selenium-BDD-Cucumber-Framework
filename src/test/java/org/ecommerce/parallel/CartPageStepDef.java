@@ -1,6 +1,7 @@
 package org.ecommerce.parallel;
 
 import io.cucumber.java.en.Then;
+import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.CartPage;
 import org.ecommerce.utilities.BrowserFactory;
 import org.ecommerce.utilities.ScenarioContext;
@@ -9,10 +10,13 @@ import org.junit.Assert;
 public class CartPageStepDef {
 
     private CartPage cartPage;
+    private PageManager pageManager;
 
     public CartPageStepDef(){
 
-        cartPage = new CartPage(BrowserFactory.getDriver());
+        pageManager = new PageManager(BrowserFactory.getDriver());
+
+        cartPage = pageManager.getCartPage();
     }
 
     @Then("user should see the product in my cart")

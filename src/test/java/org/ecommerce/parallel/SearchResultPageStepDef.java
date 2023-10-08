@@ -1,6 +1,7 @@
 package org.ecommerce.parallel;
 
 import io.cucumber.java.en.When;
+import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.ProductDetailsPage;
 import org.ecommerce.pages.SearchResultPage;
 import org.ecommerce.utilities.BrowserFactory;
@@ -13,12 +14,15 @@ public class SearchResultPageStepDef {
 
     private SearchResultPage resultPage;
     private ProductDetailsPage detailsPage;
+    private PageManager pageManager;
 
     public SearchResultPageStepDef(){
 
-        resultPage = new SearchResultPage(BrowserFactory.getDriver());
+        pageManager = new PageManager(BrowserFactory.getDriver());
 
-        detailsPage = new ProductDetailsPage(BrowserFactory.getDriver());
+        resultPage = pageManager.getSearchResultPage();
+
+        detailsPage = pageManager.getDetailsPage();
     }
 
     @When("user clicks on first product in search result page")
