@@ -9,7 +9,7 @@ import org.ecommerce.pages.AccountPage;
 import org.ecommerce.pages.AddAddressPage;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.LoginPage;
-import org.ecommerce.utilities.BrowserFactory;
+import org.ecommerce.manager.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
 import org.ecommerce.utilities.ScenarioContext;
 import org.junit.Assert;

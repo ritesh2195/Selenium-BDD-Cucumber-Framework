@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.LoginPage;
-import org.ecommerce.utilities.BrowserFactory;
+import org.ecommerce.manager.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
 import org.junit.Assert;
 

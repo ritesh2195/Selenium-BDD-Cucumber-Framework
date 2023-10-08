@@ -3,7 +3,7 @@ package org.ecommerce.parallel;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.ecommerce.utilities.BrowserFactory;
+import org.ecommerce.manager.BrowserFactory;
 import org.ecommerce.utilities.ConfigReader;
 import org.ecommerce.utilities.ScenarioContext;
 import org.openqa.selenium.OutputType;
