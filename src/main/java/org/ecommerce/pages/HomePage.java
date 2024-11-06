@@ -1,8 +1,9 @@
 package org.ecommerce.pages;
 
+import org.ecommerce.utility.BrowserUtility;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends BasePage {
+public class HomePage extends BrowserUtility {
 
     private HeaderPage headerPage;
 

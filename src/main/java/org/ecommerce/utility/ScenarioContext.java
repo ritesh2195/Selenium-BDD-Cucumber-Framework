@@ -1,4 +1,4 @@
-package org.ecommerce.utilities;
+package org.ecommerce.utility;
 
 import io.cucumber.java.Scenario;
 

@@ -1,4 +1,4 @@
-package org.ecommerce.utilities;
+package org.ecommerce.utility;
 
 import java.io.File;
 import java.io.FileInputStream;

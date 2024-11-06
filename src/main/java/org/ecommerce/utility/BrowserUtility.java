@@ -1,28 +1,32 @@
-package org.ecommerce.pages;
+package org.ecommerce.utility;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.Set;
 
-public class BasePage extends AbstractPage{
+public abstract class BrowserUtility {
 
-    public BasePage(WebDriver driver) {
+    public WebDriver driver;
+    WebDriverWait wait;
 
-        super(driver);
+    public BrowserUtility(WebDriver driver){
+
+        this.driver = driver;
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(ConfigReader.getInstance().getTimeOut()));
     }
 
-    @Override
     public String getPageTitle() {
         return driver.getTitle();
     }
 
-    @Override
     public String getCurrentURL() {
         return driver.getCurrentUrl();
     }
 
-    @Override
     public void clickWebElement(By locator) {
 
         try {
@@ -55,7 +59,6 @@ public class BasePage extends AbstractPage{
         }
     }
 
-    @Override
     public void clickWebElement(WebElement element) {
 
         try {
@@ -93,13 +96,11 @@ public class BasePage extends AbstractPage{
         return driver.getWindowHandle();
     }
 
-    @Override
     public void switchToParentWindow(String parentWindowId){
 
         driver.switchTo().window(parentWindowId);
     }
 
-    @Override
     public void switchToChildWindow(String parentWindowId){
 
         Set<String> childWindowsId = driver.getWindowHandles();
@@ -128,5 +129,5 @@ public class BasePage extends AbstractPage{
 
         return "Exception occurred while retrieving the text";
 
-        }
     }
+}

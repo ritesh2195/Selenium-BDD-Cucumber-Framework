@@ -1,26 +1,27 @@
 package org.ecommerce.pages;
 
-import org.ecommerce.utilities.ScenarioContext;
+import org.ecommerce.utility.BrowserUtility;
+import org.ecommerce.utility.ScenarioContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashMap;
 
-public class AddAddressPage extends BasePage{
+public class AddAddressPage extends BrowserUtility {
 
-    private By addAddressLink = By.xpath("//h2[contains(text(),'Add address')]");
-    private By countryDropDown = By.xpath("//select[contains(@id,'countryCode-dropdown')]");
-    private By fullName = By.id("address-ui-widgets-enterAddressFullName");
-    private By mobileNumber = By.id("address-ui-widgets-enterAddressPhoneNumber");
-    private By pinCode = By.id("address-ui-widgets-enterAddressPostalCode");
-    private By flatHouse = By.id("address-ui-widgets-enterAddressLine1");
-    private By streetAddress = By.id("address-ui-widgets-enterAddressLine2");
-    private By townCity = By.id("address-ui-widgets-enterAddressCity");
-    private By stateDropDown = By.xpath("//select[contains(@id,'address-ui-widgets-enterAddressStateOrRegion')]");
-    private By addAddressButton = By.xpath("//span[text()='Add address']//preceding-sibling::input");
-    private By confirmationMessage = By.xpath("//h4[@class='a-alert-heading']");
-    private By yesButton = By.id("deleteAddressModal-2-submit-btn");
+    private final By addAddressLink = By.xpath("//h2[contains(text(),'Add address')]");
+    private final By countryDropDown = By.xpath("//select[contains(@id,'countryCode-dropdown')]");
+    private final By fullName = By.id("address-ui-widgets-enterAddressFullName");
+    private final By mobileNumber = By.id("address-ui-widgets-enterAddressPhoneNumber");
+    private final By pinCode = By.id("address-ui-widgets-enterAddressPostalCode");
+    private final By flatHouse = By.id("address-ui-widgets-enterAddressLine1");
+    private final By streetAddress = By.id("address-ui-widgets-enterAddressLine2");
+    private final By townCity = By.id("address-ui-widgets-enterAddressCity");
+    private final By stateDropDown = By.xpath("//select[contains(@id,'address-ui-widgets-enterAddressStateOrRegion')]");
+    private final By addAddressButton = By.xpath("//span[text()='Add address']//preceding-sibling::input");
+    private final By confirmationMessage = By.xpath("//h4[@class='a-alert-heading']");
+    private final By yesButton = By.id("deleteAddressModal-2-submit-btn");
 
     public AddAddressPage(WebDriver driver) {
 

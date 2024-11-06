@@ -4,7 +4,7 @@ import io.cucumber.java.en.Then;
 import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.CartPage;
 import org.ecommerce.manager.BrowserFactory;
-import org.ecommerce.utilities.ScenarioContext;
+import org.ecommerce.utility.ScenarioContext;
 import org.junit.Assert;
 
 public class CartPageStepDef {

@@ -1,5 +1,6 @@
 package org.ecommerce.pages;
 
+import org.ecommerce.utility.BrowserUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import java.text.NumberFormat;
 import java.util.*;
 
-public class SearchResultPage extends BasePage{
+public class SearchResultPage extends BrowserUtility {
 
-    private By productName = By.xpath("//span[contains(@class,'a-size-base-plus')]");
-    private By productPrice = By.xpath("//span[@class='a-price']//child::span//child::span[2]");
+    private final By productName = By.xpath("//span[contains(@class,'a-size-base-plus')]");
+    private final By productPrice = By.xpath("//span[@class='a-price']//child::span//child::span[2]");
 
     public SearchResultPage(WebDriver driver) {
 

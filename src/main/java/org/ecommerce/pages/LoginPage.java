@@ -1,14 +1,14 @@
 package org.ecommerce.pages;
 
+import org.ecommerce.utility.BrowserUtility;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.HashMap;
 
-public class LoginPage extends BasePage {
+public class LoginPage extends BrowserUtility {
 
-    private WebDriverWait wait;
     private By userNameTextBox = By.id("ap_email");
     private By continueButton = By.id("continue");
     private By passwordTextBox = By.id("ap_password");
@@ -22,8 +22,6 @@ public class LoginPage extends BasePage {
         super(driver);
 
         this.driver = driver;
-
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void enterUserName(String email){

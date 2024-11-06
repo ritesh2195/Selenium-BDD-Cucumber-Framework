@@ -1,5 +1,6 @@
 package org.ecommerce.pages;
 
+import org.ecommerce.utility.BrowserUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,12 +8,12 @@ import org.openqa.selenium.WebElement;
 import java.util.LinkedList;
 import java.util.List;
 
-public class HeaderPage extends BasePage {
+public class HeaderPage extends BrowserUtility {
 
-    private By signInLink = By.id("nav-link-accountList");
-    private By accountListLine1 = By.id("nav-link-accountList-nav-line-1");
-    private By searchTextBox = By.xpath("//input[@placeholder='Search Amazon.in']");
-    private By searchAutoListOption = By.xpath("//div[@class='s-suggestion-container']//div");
+    private final By signInLink = By.id("nav-link-accountList");
+    private final By accountListLine1 = By.id("nav-link-accountList-nav-line-1");
+    private final By searchTextBox = By.xpath("//input[@placeholder='Search Amazon.in']");
+    private final By searchAutoListOption = By.xpath("//div[@class='s-suggestion-container']//div");
 
     public HeaderPage(WebDriver driver){
 

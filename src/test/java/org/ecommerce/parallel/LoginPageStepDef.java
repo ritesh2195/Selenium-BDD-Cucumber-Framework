@@ -6,7 +6,7 @@ import org.ecommerce.manager.PageManager;
 import org.ecommerce.pages.HomePage;
 import org.ecommerce.pages.LoginPage;
 import org.ecommerce.manager.BrowserFactory;
-import org.ecommerce.utilities.ConfigReader;
+import org.ecommerce.utility.ConfigReader;
 import org.junit.Assert;
 
 import java.util.HashMap;

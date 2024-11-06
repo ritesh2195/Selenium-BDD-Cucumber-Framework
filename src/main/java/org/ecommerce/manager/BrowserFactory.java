@@ -1,6 +1,6 @@
 package org.ecommerce.manager;
 
-import org.ecommerce.utilities.ConfigReader;
+import org.ecommerce.utility.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
