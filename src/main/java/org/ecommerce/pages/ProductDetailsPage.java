@@ -10,13 +10,13 @@ import java.util.HashMap;
 
 public class ProductDetailsPage extends BrowserUtility {
 
-    private final By productNameOnDetailsPage = By.xpath("//span[@id='productTitle']");
-    private final By productPriceOnDetailsPage = By.xpath("//div[@id='corePriceDisplay_desktop_feature_div']//span[contains(@class,'a-price-whole')]");
-    private final By addToCartButton = By.id("add-to-cart-button");
-    private final By buyNowButton = By.id("buy-now-button");
-    private final By quantityDropDown = By.id("quantity");
-    private final By cartLink = By.id("nav-cart-count-container");
-    private final By productCountInCartIcon = By.xpath("(//div[@id='nav-cart-count-container']//span)[1]");
+    private By productNameOnDetailsPage = By.xpath("//span[@id='productTitle']");
+    private By productPriceOnDetailsPage = By.xpath("//div[@id='corePriceDisplay_desktop_feature_div']//span[contains(@class,'a-price-whole')]");
+    private By addToCartButton = By.id("add-to-cart-button");
+    private By buyNowButton = By.id("buy-now-button");
+    private By quantityDropDown = By.id("quantity");
+    private By cartLink = By.id("nav-cart-count-container");
+    private By productCountInCartIcon = By.xpath("(//div[@id='nav-cart-count-container']//span)[1]");
 
     public ProductDetailsPage(WebDriver driver){
 

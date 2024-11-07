@@ -10,10 +10,10 @@ import java.util.List;
 
 public class HeaderPage extends BrowserUtility {
 
-    private final By signInLink = By.id("nav-link-accountList");
-    private final By accountListLine1 = By.id("nav-link-accountList-nav-line-1");
-    private final By searchTextBox = By.xpath("//input[@placeholder='Search Amazon.in']");
-    private final By searchAutoListOption = By.xpath("//div[@class='s-suggestion-container']//div");
+    private By signInLink = By.id("nav-link-accountList");
+    private By accountListLine1 = By.id("nav-link-accountList-nav-line-1");
+    private By searchTextBox = By.xpath("//input[@placeholder='Search Amazon.in']");
+    private By searchAutoListOption = By.xpath("//div[@class='s-suggestion-container']//div");
 
     public HeaderPage(WebDriver driver){
 

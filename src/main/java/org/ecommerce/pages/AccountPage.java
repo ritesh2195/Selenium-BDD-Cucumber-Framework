@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccountPage extends BrowserUtility {
 
-    private final By addressLink = By.xpath("//h2[contains(text(),'Your Addresses')]");
+    private By addressLink = By.xpath("//h2[contains(text(),'Your Addresses')]");
 
     public AccountPage(WebDriver driver) {
 

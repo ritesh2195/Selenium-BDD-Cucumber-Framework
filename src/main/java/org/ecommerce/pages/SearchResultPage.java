@@ -10,8 +10,8 @@ import java.util.*;
 
 public class SearchResultPage extends BrowserUtility {
 
-    private final By productName = By.xpath("//span[contains(@class,'a-size-base-plus')]");
-    private final By productPrice = By.xpath("//span[@class='a-price']//child::span//child::span[2]");
+    private By productName = By.xpath("//span[contains(@class,'a-size-base-plus')]");
+    private By productPrice = By.xpath("//span[@class='a-price']//child::span//child::span[2]");
 
     public SearchResultPage(WebDriver driver) {
 
